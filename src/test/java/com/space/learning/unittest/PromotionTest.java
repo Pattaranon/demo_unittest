@@ -34,13 +34,13 @@ public class PromotionTest {
     @Order(2)
     @Test
     public void comeNineShouldBePayThree_ResultSuccessTest () {
-        Assertions.assertEquals(400, promotion.come4Pay3(MockDataForTestOrder2.come_x, MockDataForTestOrder2.pay_y, MockDataForTestOrder2.total_person, MockDataForTestOrder2.per_head));
+        Assertions.assertEquals(1596, promotion.come4Pay3(MockDataForTestOrder2.come_x, MockDataForTestOrder2.pay_y, MockDataForTestOrder2.total_person, MockDataForTestOrder2.per_head));
     }
 
     interface MockDataForTestOrder2 {
         int come_x = 4;
         int pay_y = 3;
-        int per_head = 100;
-        int total_person = 4;
+        int per_head = 399;
+        int total_person = 5;
     }
 }

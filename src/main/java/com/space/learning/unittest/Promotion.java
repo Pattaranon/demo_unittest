@@ -11,4 +11,19 @@ public class Promotion {
 
         return total;
     }
+
+    public double calculatePromotion(int item, int price) {
+        double discountPercent = 0;
+        if(item == 1) {
+            discountPercent = .25;
+        }
+        else if( item == 2) {
+            discountPercent = .50;
+        }
+        else {
+            discountPercent = .100;
+        }
+
+        return item * price * (1 - discountPercent);
+    }
 }
