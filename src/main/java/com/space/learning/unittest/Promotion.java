@@ -5,9 +5,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Promotion {
 
-    public int come4Pay3(int comePromotion, int payPromotion, int comePerson, int perHead) {
-        int adveratePerson = comePerson / comePromotion;
-        int total = adveratePerson * (payPromotion * perHead);
+    public int come4Pay3(int come_x, int pay_y, int total_person, int per_head) {
+        int personCome = (total_person / come_x) * (pay_y * per_head);
+        int total = personCome + (total_person % come_x * per_head);
 
         return total;
     }

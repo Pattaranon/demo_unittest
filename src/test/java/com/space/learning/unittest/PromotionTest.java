@@ -28,15 +28,19 @@ public class PromotionTest {
     @Order(1)
     @Test
     public void comeFourPayThree_ResultSuccessTest() {
-        /*
-        int intPerson = MockData.comePerson / MockData.comeX;
-        int payTotal = MockData.payY * MockData.perHead;
-        int roundFirst = intPerson * payTotal;
-        int modPerson = MockData.comePerson % MockData.comeX * MockData.perHead;
-        int total = roundFirst + modPerson;
-        */
-
-
         Assertions.assertEquals(600, promotion.come4Pay3(4, 3, 4, 200));
+    }
+
+    @Order(2)
+    @Test
+    public void comeNineShouldBePayThree_ResultSuccessTest () {
+        Assertions.assertEquals(400, promotion.come4Pay3(MockDataForTestOrder2.come_x, MockDataForTestOrder2.pay_y, MockDataForTestOrder2.total_person, MockDataForTestOrder2.per_head));
+    }
+
+    interface MockDataForTestOrder2 {
+        int come_x = 4;
+        int pay_y = 3;
+        int per_head = 100;
+        int total_person = 4;
     }
 }
