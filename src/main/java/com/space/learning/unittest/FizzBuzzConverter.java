@@ -4,7 +4,7 @@ package com.space.learning.unittest;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FizzBuzzConverter extends Exception {
+public class FizzBuzzConverter {
 
     public String CalculateFizzBuss(int inputData){
         String result = "";
